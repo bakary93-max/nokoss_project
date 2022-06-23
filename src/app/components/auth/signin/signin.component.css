@@ -1,0 +1,62 @@
+.signup{
+  height: 70vh;
+  background-color: #1d1d1d;
+}
+
+
+.btn{
+  height: 40px;
+  min-width: 100px;
+  padding: 10px 0;
+  margin: 10px 0;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  background-color: #1d1d1d;
+  border: none;
+  font-weight: bold;
+}
+
+.form-container{
+  width: 600px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border: 0.1px solid #ccc;
+  transform: translate(-50%, -50%);
+}
+
+.form{
+  padding: 5px;
+}
+
+.form .form-line{
+  min-height: 50px;
+  padding: 10px 0;
+}
+
+form .form-line input{
+  font-size: 1.1rem;
+  height: 40px;
+}
+h2{
+  color: white;
+}
+
+@media screen and (max-width: 550px){
+  .form-container{
+    width: 90px;
+  }
+
+}
+
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.error{
+  color: red;
+  font-size: 20px;
+}
+

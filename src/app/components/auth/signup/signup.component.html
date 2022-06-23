@@ -1,0 +1,29 @@
+<div class="signup">
+  <div class="form-container">
+    <form action="">
+      <h2>Inscription</h2>
+      <div class="form-line flex gap-20">
+        <input class="flex-1" type="text" [formControl]="firstname" name="firstname" placeholder="Ton prenom..."/>
+      </div>
+      <div class="form-line flex gap-20">
+        <input class="flex-1" type="text" [formControl]="lastname" name="lastname" placeholder="Ton nom..."/>
+      </div>
+
+      <div class="form-line flex">
+        <input class="flex-1" type="email" [formControl]="email" name="email" placeholder="Ton email..."/>
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" [formControl]="password" name="password" placeholder="Ton mot de passe..."/>
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" [formControl]="passwordConfirm" name="passwordConfirm" placeholder="Confirme ton mot de passe..."/>
+      </div>
+      <div class="button flex">
+        <button class="btn flex-1" [disabled]="!this.signupForm.valid" (click)="handleSubmit()">S'inscrire</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
