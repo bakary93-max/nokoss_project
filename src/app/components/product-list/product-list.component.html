@@ -1,0 +1,22 @@
+<div class="product-list">
+  <app-product-items *ngFor="let prov of prod" [product]="prov"
+                     (displayProductViewModal)="handleDisplayProductViewModal($event)">
+  </app-product-items>
+
+  <div class="bar" *ngIf="!prod.length">
+    Désolé, aucun article n'est disponible pour le moment
+  </div>
+
+  <app-modal-product-details
+    *ngIf="isDisplayModal && modalProduct"
+    [product]="modalProduct"
+    (close)="handleCloseModal()"
+  ></app-modal-product-details>
+</div>
+
+
+<!--<div class="product-list">
+  <app-product-items [product]="prod[0]"></app-product-items>
+
+</div>
+-->

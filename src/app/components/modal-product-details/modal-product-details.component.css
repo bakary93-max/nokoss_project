@@ -1,0 +1,42 @@
+.modal-product-details-container{
+  height: 400px;
+  width: 650px;
+  background-color: white;
+  color: black;
+  position: fixed;
+  z-index: 800;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: #1d1d1d;
+}
+
+.modal-product-details-container img{
+  width: 100%;
+  height: 100%;
+}
+
+.modal-product-details-view{
+  text-align: center;
+}
+
+.modal-product-details-view .btn-close button{
+  color: white;
+  background-color: #1d1d1d;
+}
+
+@media screen and (max-width: 660px) {
+  .modal-product-details-container{
+    width: 95%;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="modal-product-details">
+  <div class="overlay"></div>
+  <div class="modal-product-details-container flex">
+    <div class="modal-product-details-image flex-1">
+      <img [src]="product? product.imageUrl[0] : ''"
+           [alt]="product?.name">
+    </div>
+
+    <div class="modal-product-details-view flex-1 flex align-item-center justify-contain-center column">
+      <h2>{{product?.name}}</h2>
+      <div class="modal-product-details-view-price">
+        <h4>€ {{ (product?.sold_price || 0) /100}}</h4>
+        <del>
+          <h4>€ {{ (product?.regular_price || 0) /100}}</h4>
+        </del>
+      </div>
+      <div class="modal-product-view-details-created-at">
+          {{product?.description}}
+      </div>
+      <button (click)="closeModal()"
+        class="btn btn-close"><h2>Fermer</h2></button>
+    </div>
+  </div>
+</div>
