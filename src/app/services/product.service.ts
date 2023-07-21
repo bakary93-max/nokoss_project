@@ -107,7 +107,7 @@ export class ProductService {
   },
     {
     name: "Nokoss fait maison2",
-    description: "Nokoss fait maison3",
+    description: "NokossaisonBAKARYYYYYYY",
     sold_price : 7,
     regular_price: 15,
     imageUrl: ["/assets/images/products/nokoss1.jpg"],

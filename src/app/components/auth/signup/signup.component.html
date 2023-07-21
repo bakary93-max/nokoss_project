@@ -12,8 +12,24 @@
       <div class="form-line flex">
         <input class="flex-1" type="email" [formControl]="email" name="email" placeholder="Ton email..."/>
       </div>
+      <div class="error" *ngIf="email.dirty && !email.valid">
+        <p *ngIf="email.hasError('required')">
+          L'email est requis
+        </p>
+        <p *ngIf="!email.hasError('required')">
+          Email incorrect. Vérifiez votre saisie
+        </p>
+      </div>
       <div class="form-line flex">
         <input class="flex-1" type="password" [formControl]="password" name="password" placeholder="Ton mot de passe..."/>
+      </div>
+      <div class="error" *ngIf="password.dirty && !password.valid">
+        <p *ngIf="password.hasError('required')">
+          Le mot de passe est requis
+        </p>
+        <p *ngIf="password.hasError('minlength')">
+          Le mot de passe doit comporter au moins 8 caractères
+        </p>
       </div>
       <div class="form-line flex">
         <input class="flex-1" type="password" [formControl]="passwordConfirm" name="passwordConfirm" placeholder="Confirme ton mot de passe..."/>

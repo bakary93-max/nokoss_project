@@ -43,6 +43,10 @@ form .form-line input{
 h2{
   color: white;
 }
+.error{
+  color: red;
+  font-size: 20px;
+}
 
 @media screen and (max-width: 550px){
   .form-container{
